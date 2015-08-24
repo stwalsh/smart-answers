@@ -10,7 +10,7 @@ module SmartAnswer::Calculators
     NEW_RULES_START_DATE = Date.parse('6 April 2016')
 
     def initialize(answers)
-      @gender = answers[:gender].to_sym
+      @gender = answers[:gender].try(:to_sym)
       @dob = answers[:dob]
       @qualifying_years = answers.fetch(:qualifying_years, 0)
       @available_years = ni_years_to_date_from_dob

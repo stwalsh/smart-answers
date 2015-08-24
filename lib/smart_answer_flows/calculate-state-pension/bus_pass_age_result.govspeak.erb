@@ -1,0 +1,8 @@
+<% content_for :title do %>
+  Your bus pass age
+
+<% end %>
+
+<% content_for :body do %>
+  <%= render partial: 'bus_pass_age.govspeak.erb', locals: { bus_pass_age: pension_credit_date } %>
+<% end %>

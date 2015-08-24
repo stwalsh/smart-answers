@@ -2,6 +2,7 @@
 :which_calculation?:
 - age
 - amount
+- bus_pass
 :gender?:
 - male
 - female
