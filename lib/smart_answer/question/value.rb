@@ -6,7 +6,7 @@ module SmartAnswer
         super
       end
 
-      def parse_input(raw_input)
+      def parse_input(raw_input, state)
         if Integer == @parse
           begin
             Integer(raw_input)

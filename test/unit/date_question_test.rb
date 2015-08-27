@@ -37,7 +37,7 @@ module SmartAnswer
         from { Date.parse('2011-01-01') }
         to { Date.parse('2011-01-03') }
       end
-      assert_equal ::Date.parse('2011-01-01')..::Date.parse('2011-01-03'), q.range
+      assert_equal ::Date.parse('2011-01-01')..::Date.parse('2011-01-03'), q.range(state = nil)
     end
 
     test "a day before the allowed range is invalid" do

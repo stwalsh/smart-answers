@@ -25,7 +25,7 @@ module SmartAnswer
         options.map {|v| v.slug}.include? (option.to_s)
       end
 
-      def parse_input(raw_input)
+      def parse_input(raw_input, state)
         raise SmartAnswer::InvalidResponse, "Illegal option #{raw_input} for #{name}", caller unless valid_option?(raw_input)
         super
       end

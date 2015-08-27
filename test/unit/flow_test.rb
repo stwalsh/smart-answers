@@ -67,7 +67,7 @@ class FlowTest < ActiveSupport::TestCase
 
     assert_equal 1, s.nodes.size
     assert_equal 1, s.questions.size
-    assert_equal Date.parse('2011-01-01')..Date.parse('2014-01-01'), s.questions.first.range
+    assert_equal Date.parse('2011-01-01')..Date.parse('2014-01-01'), s.questions.first.range(state = nil)
   end
 
   test "Can build value question nodes" do
@@ -215,7 +215,7 @@ class FlowTest < ActiveSupport::TestCase
         @error_message = "Sorry, that's not valid"
         @flow.node(:do_you_like_jam?)
           .stubs(:parse_input)
-          .with('bad')
+          .with('bad', state = anything)
           .raises(SmartAnswer::InvalidResponse.new(@error_message))
       end
 

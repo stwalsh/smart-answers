@@ -52,7 +52,7 @@ module SmartAnswer
       end
 
       def transition(current_state, raw_input)
-        input = parse_input(raw_input)
+        input = parse_input(raw_input, current_state)
         new_state = @next_node_calculations.inject(current_state.dup) do |new_state, calculation|
           calculation.evaluate(new_state, input)
         end
@@ -107,7 +107,7 @@ module SmartAnswer
         @predicates.fetch(method)
       end
 
-      def parse_input(raw_input)
+      def parse_input(raw_input, state)
         raw_input
       end
 

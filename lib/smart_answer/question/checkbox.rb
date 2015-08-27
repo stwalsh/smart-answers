@@ -21,7 +21,7 @@ module SmartAnswer
         @options.include?(option)
       end
 
-      def parse_input(raw_input)
+      def parse_input(raw_input, state)
         return NONE_OPTION if raw_input.blank? or raw_input == NONE_OPTION
         raw_input = raw_input.split(',') if raw_input.is_a?(String)
         raw_input.each do |option|

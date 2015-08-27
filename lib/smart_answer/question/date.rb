@@ -83,11 +83,11 @@ module SmartAnswer
         instance_variable_defined?(:@default_year_func)
       end
 
-      def range
-        @range ||= @from_func.present? and @to_func.present? ? @from_func.call..@to_func.call : false
+      def range(state)
+        @range ||= @from_func.present? and @to_func.present? ? @from_func.call(state)..@to_func.call(state) : false
       end
 
-      def parse_input(input)
+      def parse_input(input, state)
         date = case input
           when Hash, ActiveSupport::HashWithIndifferentAccess
            input = input.symbolize_keys
@@ -109,14 +109,14 @@ module SmartAnswer
           else
            raise InvalidResponse, "Bad date", caller
           end
-        validate_input(date) if @validate_in_range
+        validate_input(date, state) if @validate_in_range
         date
       rescue
         raise InvalidResponse, "Bad date: #{input.inspect}", caller
       end
 
       def to_response(input)
-        date = parse_input(input)
+        date = parse_input(input, state = nil)
         {
           day: date.day,
           month: date.month,
@@ -134,10 +134,10 @@ module SmartAnswer
 
     private
 
-      def validate_input(date)
-        return unless range
+      def validate_input(date, state)
+        return unless range(state)
 
-        min, max = [range.begin, range.end].sort
+        min, max = [range(state).begin, range(state).end].sort
         if date < min || date > max
           raise InvalidResponse, "Provided date is out of range: #{date}", caller
         end

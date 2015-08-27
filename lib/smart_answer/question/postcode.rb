@@ -1,7 +1,7 @@
 module SmartAnswer
   module Question
     class Postcode < Base
-      def parse_input(raw_input)
+      def parse_input(raw_input, state)
         postcode = UKPostcode.new(raw_input)
         raise InvalidResponse, :error_postcode_invalid unless postcode.valid?
         raise InvalidResponse, :error_postcode_incomplete unless postcode.full?

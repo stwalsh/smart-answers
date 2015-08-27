@@ -4,10 +4,10 @@ class DateQuestionPresenter < QuestionPresenter
   end
 
   def start_date
-    @node.range == false ? 1.year.ago : @node.range.begin
+    @node.range(@state) == false ? 1.year.ago : @node.range(@state).begin
   end
 
   def end_date
-    @node.range == false ? 3.years.from_now : @node.range.end
+    @node.range(@state) == false ? 3.years.from_now : @node.range(@state).end
   end
 end

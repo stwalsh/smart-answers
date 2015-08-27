@@ -45,35 +45,35 @@ module SmartAnswer
 
       context "with an array" do
         should "return the responses as a sorted comma-separated string" do
-          assert_equal 'green,red', @question.parse_input(['red', 'green'])
+          assert_equal 'green,red', @question.parse_input(['red', 'green'], state = nil)
         end
 
         should "raise an error if given a non-existing response" do
           assert_raise InvalidResponse do
-            @question.parse_input ['blue', 'orange']
+            @question.parse_input ['blue', 'orange'], state = nil
           end
         end
       end
 
       context "with a comma separated string" do
         should "return the responses as a sorted comma-separated string" do
-          assert_equal 'green,red', @question.parse_input('red,green')
+          assert_equal 'green,red', @question.parse_input('red,green', state = nil)
         end
 
         should "raise an error if given a non-existing response" do
           assert_raise InvalidResponse do
-            @question.parse_input 'blue,orange'
+            @question.parse_input 'blue,orange', state = nil
           end
         end
       end
 
       context "handling the special none case" do
         should "return none when passed nil" do
-          assert_equal 'none', @question.parse_input(nil)
+          assert_equal 'none', @question.parse_input(nil, state = nil)
         end
 
         should "return none when passed special value 'none'" do
-          assert_equal 'none', @question.parse_input('none')
+          assert_equal 'none', @question.parse_input('none', state = nil)
         end
       end
     end
