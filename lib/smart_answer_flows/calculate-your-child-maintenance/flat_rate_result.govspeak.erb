@@ -2,7 +2,7 @@
   <% if paying_or_receiving == 'pay'
     fees_title = 'Additional weekly fees | Total amount to pay per week'
   else
-    fees_title = 'Fees | Total amount you’ll receive'
+    fees_title = 'Fees | Total amount you'll receive'
   end %>
   Based on your answers the child maintenance payment is the flat rate of £<%= flat_rate_amount %> per week.
 
@@ -19,10 +19,10 @@
 
   You will pay up to £<%= total_yearly_fees %> in fees per year if you <%= paying_or_receiving %> child maintenance through the Collect and Pay service.
 
-  ^You don’t have to pay an application fee if you’re in Northern Ireland.^
+  ^You don't have to pay an application fee if you're in Northern Ireland.^
 
   <% if paying_or_receiving == 'pay' %>
-    You may also have to pay an enforcement charge if you don’t make your full payments on time.
+    You may also have to pay an enforcement charge if you don't make your full payments on time.
   <% end %>
 
   The calculator gives an estimate. The exact amount the Child Maintenance Service would calculate might be different.

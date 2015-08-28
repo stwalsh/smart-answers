@@ -3,22 +3,22 @@
 
   <%= render partial: 'how_long.govspeak.erb', locals: { optimistic_processing_time: optimistic_processing_time, waiting_time: waiting_time } %>
   <% if application_action == "replacing" %>
-    If you haven’t already reported the loss or theft, you must include [form LS01](/government/publications/lost-or-stolen-passport-notification--2) with your passport application.
+    If you haven't already reported the loss or theft, you must include [form LS01](/government/publications/lost-or-stolen-passport-notification--2) with your passport application.
 
   <% end %>
   You may have to attend an interview.
 
   Applications will take longer if:
 
-  - Her Majesty’s Passport Office needs to ask you for more information or documents
+  - Her Majesty's Passport Office needs to ask you for more information or documents
   - the photographs you send are rejected
 
-  Don’t book travel until you have a valid passport. If you need to travel more urgently, you may be able to apply for an [Emergency Travel Document.](/emergency-travel-document)
+  Don't book travel until you have a valid passport. If you need to travel more urgently, you may be able to apply for an [Emergency Travel Document.](/emergency-travel-document)
 
   ## Cost
 
   <% if %w(st-helena-ascension-and-tristan-da-cunha).include?(current_location) %>
-    You’ll have to pay a fee for your passport.
+    You'll have to pay a fee for your passport.
 
     <% case child_or_adult %>
     <% when 'adult' %>
@@ -32,9 +32,9 @@
       | Child passport | £53.00 |
     <% end %>
 
-    You must pay in cash. In addition to the passport fee you’ll need to pay any local administration fees which apply from the office where you make your application.
+    You must pay in cash. In addition to the passport fee you'll need to pay any local administration fees which apply from the office where you make your application.
   <% elsif application_action == 'replacing' and ips_number == '1' and ips_docs_number == '1' %>
-    You’ll have to pay a fee for your passport and a courier fee of £9.70. The courier fee pays for your passport to be sent back to you securely.
+    You'll have to pay a fee for your passport and a courier fee of £9.70. The courier fee pays for your passport to be sent back to you securely.
 
     <% case child_or_adult %>
     <% when 'adult' %>
@@ -53,15 +53,15 @@
   <% elsif %w(tajikistan turkmenistan uzbekistan).include?(current_location) %>
     <% case current_location %>
     <% when 'tajikistan' %>
-      You’ll have to pay a fee for your passport and a courier fee of £24.72.
+      You'll have to pay a fee for your passport and a courier fee of £24.72.
 
       The courier fee pays for your passport to be sent securely to the British Embassy in Dushanbe for you to collect.
     <% when 'turkmenistan' %>
-      You’ll have to pay a fee for your passport and a courier fee of £24.72.
+      You'll have to pay a fee for your passport and a courier fee of £24.72.
 
       The courier fee pays for your passport to be sent securely to the British Embassy in Ashgabat for you to collect.
     <% when 'uzbekistan' %>
-      You’ll have to pay a fee for your passport and a courier fee of £23.01.
+      You'll have to pay a fee for your passport and a courier fee of £23.01.
 
       The courier fee pays for your passport to be sent securely to the British Embassy in Tashkent for you to collect.
     <% end %>
@@ -76,20 +76,20 @@
     <% if uk_visa_application_centre_countries.include?(current_location) %>
       <% case ips_number %>
       <% when '2' %>
-        You’ll have to pay a fee for your passport and a courier fee of £24.72. The courier fee pays for your passport to be sent securely to the UK Visa Application Centre where you applied for you to collect.
+        You'll have to pay a fee for your passport and a courier fee of £24.72. The courier fee pays for your passport to be sent securely to the UK Visa Application Centre where you applied for you to collect.
       <% when '3' %>
-        You’ll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport to be sent securely to the UK Visa Application Centre where you applied for you to collect.
+        You'll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport to be sent securely to the UK Visa Application Centre where you applied for you to collect.
       <% end %>
     <% elsif %w(pitcairn-island).include?(current_location) %>
-      You’ll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport and supporting documents to be sent back to you securely via the Pitcairn Islands Office in Auckland.
+      You'll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport and supporting documents to be sent back to you securely via the Pitcairn Islands Office in Auckland.
     <% else %>
       <% case ips_number %>
       <% when '1' %>
-        You’ll have to pay a fee for your passport and a courier fee of £19.86. The courier fee pays for your passport and supporting documents to be sent back to you securely.
+        You'll have to pay a fee for your passport and a courier fee of £19.86. The courier fee pays for your passport and supporting documents to be sent back to you securely.
       <% when '2' %>
-        You’ll have to pay a fee for your passport and a courier fee of £24.72. The courier fee pays for your passport to be sent securely to the British Embassy, high commission or consulate where you applied for you to collect.
+        You'll have to pay a fee for your passport and a courier fee of £24.72. The courier fee pays for your passport to be sent securely to the British Embassy, high commission or consulate where you applied for you to collect.
       <% when '3' %>
-        You’ll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport to be sent securely to the British Embassy, high commission or consulate where you applied for you to collect.
+        You'll have to pay a fee for your passport and a courier fee of £23.01. The courier fee pays for your passport to be sent securely to the British Embassy, high commission or consulate where you applied for you to collect.
       <% end %>
     <% end %>
 
@@ -98,7 +98,7 @@
     <% if data_query.cash_only_countries?(current_location) %>
       You must pay in cash using local currency - the prices above will be converted according to the exchange rate when you apply.
     <% elsif pay_at_appointment_countries.include?(current_location) %>
-      You must pay at your scheduled appointment using a debit or credit card. American Express, Diner’s Club and Discovery cards aren’t accepted.
+      You must pay at your scheduled appointment using a debit or credit card. American Express, Diner's Club and Discovery cards aren't accepted.
     <% else %>
       <%= render partial: 'passport_costs_ips.govspeak.erb', locals: { ips_number: ips_number } %>
     <% end %>
@@ -108,15 +108,15 @@
 
   <% if passport_data['online_application'].blank? %>
     1. Download the application form.
-    2. Use the ‘Applying for a passport if you’re outside the UK’ guidance notes to help you fill in the application form.
-    3. Include 2 identical new photos of you (or your child, if it’s a child passport application). [Follow the rules about passport photos](/photos-for-passports) or your application may be delayed.
+    2. Use the ‘Applying for a passport if you're outside the UK’ guidance notes to help you fill in the application form.
+    3. Include 2 identical new photos of you (or your child, if it's a child passport application). [Follow the rules about passport photos](/photos-for-passports) or your application may be delayed.
     <% case ips_number %>
     <% when '1' %>
-      4. Check the guidance notes to find out which supporting documents you must send with your application. You must get documents that aren’t in English - including documents showing an address - fully translated by a professional translator.
+      4. Check the guidance notes to find out which supporting documents you must send with your application. You must get documents that aren't in English - including documents showing an address - fully translated by a professional translator.
     <% when '2' %>
-      4. Check which supporting documents you must include with your application. You must get documents that aren’t in English - including documents showing an address - fully translated by a professional translator.
+      4. Check which supporting documents you must include with your application. You must get documents that aren't in English - including documents showing an address - fully translated by a professional translator.
     <% when '3' %>
-      4. Check which supporting documents you must submit with your application. You must get documents that aren’t in English - including documents showing an address - fully translated by a professional translator.
+      4. Check which supporting documents you must submit with your application. You must get documents that aren't in English - including documents showing an address - fully translated by a professional translator.
     <% end %>
 
     <% if %w(pakistan).include?(current_location) %>
@@ -130,25 +130,25 @@
     <% end %>
     <% case supporting_documents %>
     <% when 'ips_documents_group_1' %>
-      ^[Guidance notes - applying for a passport if you’re outside the UK](/government/publications/overseas-passports-guidance)^
+      ^[Guidance notes - applying for a passport if you're outside the UK](/government/publications/overseas-passports-guidance)^
       ^[Supporting documents you must send with your application](/government/publications/overseas-passport-applications-supporting-documents-guidance)^
     <% when 'ips_documents_group_2' %>
-      ^[Guidance notes - applying for a passport if you’re outside the UK](/government/publications/overseas-passports-guidance)^
+      ^[Guidance notes - applying for a passport if you're outside the UK](/government/publications/overseas-passports-guidance)^
       ^[Supporting documents you must send with your application](/government/publications/overseas-passport-supporting-documents-group-2)^
     <% when 'ips_documents_group_3' %>
-      ^[Guidance notes - applying for a passport if you’re outside the UK](/government/publications/overseas-passports-guidance)^
+      ^[Guidance notes - applying for a passport if you're outside the UK](/government/publications/overseas-passports-guidance)^
       ^[Supporting documents you must send with your application](/government/publications/overseas-passport-supporting-documents-group-3)^
     <% end %>
 
     <% case birth_location %>
     <% when 'south-africa' %>
-      ^You must include your Vault birth certificate with your application – a photocopy won’t be accepted.^
+      ^You must include your Vault birth certificate with your application – a photocopy won't be accepted.^
     <% when 'spain' %>
-      ^You must include your full birth certificate (‘certificación literal’) with your application - a photocopy won’t be accepted.^
+      ^You must include your full birth certificate (‘certificación literal’) with your application - a photocopy won't be accepted.^
     <% end %>
   <% end %>
 
-  %You must include all your supporting documents with your application. You’ll get 6 weeks to provide any that are missing. Your application will be cancelled and you won’t get a refund if you don’t provide them in time.%
+  %You must include all your supporting documents with your application. You'll get 6 weeks to provide any that are missing. Your application will be cancelled and you won't get a refund if you don't provide them in time.%
 
   <%= render partial: 'making_your_application.govspeak.erb',
              locals: {

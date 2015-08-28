@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  Based on the answers you’ve given, you will be affected by the benefit cap as you get £<%= total_benefits %> in benefits and your benefit cap is £<%= benefit_cap %>.
+  Based on the answers you've given, you will be affected by the benefit cap as you get £<%= total_benefits %> in benefits and your benefit cap is £<%= benefit_cap %>.
 <% end %>
 
 <% content_for :body do %>
@@ -26,7 +26,7 @@
   New Housing Benefit amount: £<%= new_housing_benefit %>
 
   <% if new_housing_benefit_amount < 0.5 %>
-    Your Housing Benefit won’t be reduced to 0. You need to be getting some Housing Benefit to be eligible for other services.
+    Your Housing Benefit won't be reduced to 0. You need to be getting some Housing Benefit to be eligible for other services.
   <% end %>
 
   This is an estimate only. Contact the Department for Work and Pensions if you need further help.

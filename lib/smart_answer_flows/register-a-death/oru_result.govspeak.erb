@@ -1,11 +1,11 @@
 <% content_for :body do %>
   $!You must register the death according to the regulations in the country where the person died. You will be given a local death certificate.$!
 
-  This local death certificate will be accepted in the UK. It may need to be a [certified translation](/certifying-a-document) of the document if it’s not in English.
+  This local death certificate will be accepted in the UK. It may need to be a [certified translation](/certifying-a-document) of the document if it's not in English.
 
   ##Register the death with the UK authorities
 
-  You can also apply to register the death with the UK authorities. You don’t have to do this, but it means:
+  You can also apply to register the death with the UK authorities. You don't have to do this, but it means:
 
   - the death will be recorded with the General Register Offices (for England, Wales and Northern Ireland) and the National Records Office of Scotland
   - you can order a consular death registration certificate
@@ -35,10 +35,10 @@
   <% end %>
 
   - a photocopy of the photo page of the passport of the person who died
-  - their original full UK birth, naturalisation or registration certificate (if you can’t provide their passport)
-  - written permission from the person’s next of kin or the executor of their estate (if you’re not next of kin or the executor)
+  - their original full UK birth, naturalisation or registration certificate (if you can't provide their passport)
+  - written permission from the person's next of kin or the executor of their estate (if you're not next of kin or the executor)
 
-  %Your application will be rejected if the documents aren’t authentic, don’t confirm the person’s identity or don’t prove that they were a British national when they died. The registration fee won’t be refunded.%
+  %Your application will be rejected if the documents aren't authentic, don't confirm the person's identity or don't prove that they were a British national when they died. The registration fee won't be refunded.%
 
   ###2. Forms
 
@@ -94,7 +94,7 @@
 
   It usually takes 3 working days for the death to be registered in the UK once the Overseas Registration Unit has received your form and the right documents.
 
-  They’ll contact you within the 3 working days if they need more information or if they need to verify your documents. If this happens then it could take up to 3 months for the death to be registered.
+  They'll contact you within the 3 working days if they need more information or if they need to verify your documents. If this happens then it could take up to 3 months for the death to be registered.
 
   <% if reg_data_query.class::ORU_COURIER_VARIANTS.include?(current_location) %>
     <% case current_location %>
@@ -103,27 +103,27 @@
     <% when 'cameroon' %>
       Your documents will be returned to the British High Commission in Yaonde.
 
-      You’ll also be sent copies of the registration certificate if you’ve paid for them. The High Commission will contact you when your documents are ready for collection.
+      You'll also be sent copies of the registration certificate if you've paid for them. The High Commission will contact you when your documents are ready for collection.
     <% when 'kenya' %>
       Your documents will be returned to the British High Commission in Nairobi after the death has been registered.
 
-      You’ll also be sent copies of the registration certificate if you’ve paid for them. The High Commission will contact you when your documents and certificates are ready for collection.
+      You'll also be sent copies of the registration certificate if you've paid for them. The High Commission will contact you when your documents and certificates are ready for collection.
     <% when 'nigeria' %>
       Your documents will be returned to the British High Commission in Lagos after the death has been registered.
 
-      You’ll also be sent copies of the registration certificate if you’ve paid for them. The High Commission will contact you when your documents and certificates are ready for collection.
+      You'll also be sent copies of the registration certificate if you've paid for them. The High Commission will contact you when your documents and certificates are ready for collection.
     <% when 'north-korea' %>
       Your documents will be returned to the British Embassy in Pyongyang after the death has been registered.
     <% when 'papua-new-guinea' %>
       Your documents will be returned to the British Embassy in Port Moresby after the death has been registered.
     <% when 'uganda' %>
-      Your documents will be returned to the British High Commission in Kampala after the death has been registered. You’ll also be sent copies of the registration certificate if you’ve paid for them. The embassy will contact you when your documents and certificates are ready for collection.
+      Your documents will be returned to the British High Commission in Kampala after the death has been registered. You'll also be sent copies of the registration certificate if you've paid for them. The embassy will contact you when your documents and certificates are ready for collection.
     <% end %>
 
     <% unless current_location.in?(reg_data_query.class::ORU_COURIER_BY_HIGH_COMISSION) %>
-      You’ll also be sent copies of the registration certificate if you’ve paid for them. The embassy will contact you when your documents and certificates are ready for collection.
+      You'll also be sent copies of the registration certificate if you've paid for them. The embassy will contact you when your documents and certificates are ready for collection.
     <% end %>
   <% else %>
-    Your documents will be returned to you by secure courier after the death has been registered. You’ll also be sent copies of the registration certificate if you’ve paid for them.
+    Your documents will be returned to you by secure courier after the death has been registered. You'll also be sent copies of the registration certificate if you've paid for them.
   <% end %>
 <% end %>

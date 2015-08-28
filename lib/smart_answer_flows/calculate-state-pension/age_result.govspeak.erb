@@ -1,6 +1,6 @@
 <% content_for :title do %>
   <% if state_pension_date > Date.today %>
-    You’ll reach State Pension age on <%= formatted_state_pension_date %>.
+    You'll reach State Pension age on <%= formatted_state_pension_date %>.
   <% else %>
     You reached State Pension age on <%= formatted_state_pension_date %>.
   <% end %>
@@ -19,12 +19,12 @@
       ^The State Pension will change on 6 April 2016. You will claim the [new State Pension](/new-state-pension) when you reach your State Pension age.^
 
       ##Pension Credit
-      You might get [Pension Credit](/pension-credit) if you’re retired and on a low income.
+      You might get [Pension Credit](/pension-credit) if you're retired and on a low income.
 
       <% if Date.parse(pension_credit_date) > Date.today %>
         You'll reach the Pension Credit qualifying age on <%= pension_credit_date %>.
       <% else %>
-        You’ve already reached the Pension Credit qualifying age. Check if you’re eligible to claim [Pension Credit](/pension-credit/eligibility).
+        You've already reached the Pension Credit qualifying age. Check if you're eligible to claim [Pension Credit](/pension-credit/eligibility).
       <% end %>
 
       The State Pension age is regularly reviewed and may change in the future. This may also affect Pension Credit.
@@ -36,12 +36,12 @@
       Once you claim your [State Pension](/state-pension), the Pension Service will work out your full State Pension.
 
       ##Pension Credit
-      You might get [Pension Credit](/pension-credit) if you’re retired and on a low income.
+      You might get [Pension Credit](/pension-credit) if you're retired and on a low income.
 
       <% if Date.parse(pension_credit_date) > Date.today %>
         You'll reach the Pension Credit qualifying age on <%= pension_credit_date %>.
       <% else %>
-        You’ve already reached the Pension Credit qualifying age. Check if you’re eligible to claim [Pension Credit](/pension-credit/eligibility).
+        You've already reached the Pension Credit qualifying age. Check if you're eligible to claim [Pension Credit](/pension-credit/eligibility).
       <% end %>
     <% end %>
   <% else %>
@@ -51,14 +51,14 @@
 
     Contact the Pension Service on 0800 731 7898 if you haven't received it.
 
-    ^You've already reached State Pension age. You can [claim your State Pension](/state-pension#how-to-claim) if you haven’t already or [defer claiming it](/deferring-state-pension "Deferring your State Pension").^
+    ^You've already reached State Pension age. You can [claim your State Pension](/state-pension#how-to-claim) if you haven't already or [defer claiming it](/deferring-state-pension "Deferring your State Pension").^
 
     Once you claim your State Pension, the Pension Service will work out your full State Pension.
 
     ##Pension Credit
-    You might get [Pension Credit](/pension-credit) if you’re retired and on a low income.
+    You might get [Pension Credit](/pension-credit) if you're retired and on a low income.
 
-    You’ve already reached the Pension Credit qualifying age. Check if you’re eligible to claim [Pension Credit](/pension-credit/eligibility).
+    You've already reached the Pension Credit qualifying age. Check if you're eligible to claim [Pension Credit](/pension-credit/eligibility).
   <% end %>
 
   ##Bus pass
@@ -68,7 +68,7 @@
   - when you turn 60 years old in [Scotland](http://www.transportscotland.gov.uk/public-transport/concessionary-travel-people-aged-60-or-disability),[Wales](http://wales.gov.uk/topics/transport/public/concessionary/?lang=en),[Northern Ireland](http://www.nidirect.gov.uk/free-bus-travel-and-concessions)
 
   The dates may be different in some areas, check with your council when you can [apply for a bus pass](/apply-for-elderly-person-bus-pass).
-  
+
   You can get an 60+ Oyster card from [Transport for London](https://www.tfl.gov.uk/fares-and-payments/adult-discounts-and-concessions/60-london-oyster?intcmp=1763) if you live in Greater London.
 
 <% end %>
