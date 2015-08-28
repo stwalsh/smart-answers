@@ -5,7 +5,7 @@ $!You must register the birth in the country where the child was born. You'll be
 
 You can also register the birth with the UK authorities.
 
-^It’s usually quicker to register the birth with the UK authorities if you [get a British passport](/overseas-passports) for the child first. You can’t apply for a passport in Libya but you can apply in a neighbouring country.^
+^It's usually quicker to register the birth with the UK authorities if you [get a British passport](/overseas-passports) for the child first. You can't apply for a passport in Libya but you can apply in a neighbouring country.^
 
 To register the birth with the UK authorities you must:
 
@@ -22,24 +22,24 @@ s4. Post your documents and the form.
 
 You must send the original copies of:
 
-- the child’s full local birth certificate - it must have both parents' names
+- the child's full local birth certificate - it must have both parents' names
 
-- the long version of the parent’s birth certificate showing the child’s grandparents’ details (for parents who were born in the UK)
-- the parent’s naturalisation or registration certificate (for parents who weren’t born in the UK)
+- the long version of the parent's birth certificate showing the child's grandparents’ details (for parents who were born in the UK)
+- the parent's naturalisation or registration certificate (for parents who weren't born in the UK)
 - the parents’ marriage or civil partnership certificate (if applicable)
 - evidence that the parents’ previous marriages or civil partnerships have ended (eg divorce or death certificates)
 - change of name documents (if either parent has ever changed their name)
-- a letter from the parent’s employer if they’re working abroad as a UK civil servant, EU civil servant, diplomat or member of HM Forces (for British parents)
+- a letter from the parent's employer if they're working abroad as a UK civil servant, EU civil servant, diplomat or member of HM Forces (for British parents)
 - written evidence if the parent was born overseas while one of their own parents was working abroad as a UK civil servant, EU civil servant, diplomat or member of HM Forces (for British parents)
 
 You must also send photocopies of:
 
-- the photo page of the child’s British passport if they have one
-- the photo page of the parent’s current passport (for British parents)
-- the birth certificate or the photo page of the parent’s current passport (for parents who aren’t British)
+- the photo page of the child's British passport if they have one
+- the photo page of the parent's current passport (for British parents)
+- the birth certificate or the photo page of the parent's current passport (for parents who aren't British)
 
 
-%Your application will be rejected if the documents aren’t authentic, don’t confirm the child’s identity or don’t prove that the child has a claim to British nationality. The registration fee won’t be refunded.%
+%Your application will be rejected if the documents aren't authentic, don't confirm the child's identity or don't prove that the child has a claim to British nationality. The registration fee won't be refunded.%
 
 
 ##2. Fill in the application form
@@ -49,11 +49,11 @@ Print out and fill in the [application form](/government/publications/applicatio
 
 ##3. Pay
 
-You should pay online for the registration. Email <birthregistrationenquiries@fco.gov.uk> if you’re unable to pay online.
+You should pay online for the registration. Email <birthregistrationenquiries@fco.gov.uk> if you're unable to pay online.
 
 The registration fee does not include any copies of the certificate, but you can order them at the same time. Cheaper copies will be available from the General Register Office or the National Records Office of Scotland, but only from September the year after you register.
 
-Once you’ve paid you will be given a reference number to use on your birth registration form.
+Once you've paid you will be given a reference number to use on your birth registration form.
 
 Service | Fee
 -|-
@@ -90,10 +90,10 @@ $A
 
 Once the Overseas Registration Unit gets your form and the right documents, registering the birth will usually take:
 
-* at least 12 weeks if the child doesn’t have a British passport
+* at least 12 weeks if the child doesn't have a British passport
 * 5 working days if the child has a British passport
 
 The Overseas Registration Unit will contact you if they need more information or if they need to verify your documents. If this happens then it could take longer for the birth to be registered.
 
-Your documents will be returned to you by secure courier after the birth has been registered. You’ll also be sent copies of the registration certificate if you’ve paid for them.
+Your documents will be returned to you by secure courier after the birth has been registered. You'll also be sent copies of the registration certificate if you've paid for them.
 

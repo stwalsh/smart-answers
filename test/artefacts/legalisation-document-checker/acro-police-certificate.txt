@@ -6,7 +6,7 @@ Your ACRO Police Certificate can only be legalised if it has been either:
 - signed by an official from the issuing authority
 - certified
 
-^A photocopy of your document won’t be accepted.^
+^A photocopy of your document won't be accepted.^
 
 ##Certifying documents
 

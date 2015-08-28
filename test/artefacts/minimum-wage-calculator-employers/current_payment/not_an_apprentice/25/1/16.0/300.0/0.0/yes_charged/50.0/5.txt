@@ -4,7 +4,7 @@ $C
 You are paying the National Minimum Wage.
 $C
 
-The National Minimum Wage per hour for the worker’s age | The worker’s actual pay
+The National Minimum Wage per hour for the worker's age | The worker's actual pay
 - | -
 £6.50 | £16.74
 

@@ -1,15 +1,15 @@
 Statutory redundancy payment: £200 (£200 In Northern Ireland).
 
 
-##How it’s worked out
+##How it's worked out
 
 Your employee's entitlement is 2.0 weeks.
 
 They get:
 
-+ 0.5 week’s pay for each full year they were under 22
-+ 1 week’s pay for each full year they were 22 or older, but under 41
-+ 1.5 week’s pay for each full year they were 41 or older
++ 0.5 week's pay for each full year they were under 22
++ 1 week's pay for each full year they were 22 or older, but under 41
++ 1.5 week's pay for each full year they were 41 or older
 
 Length of service is capped at 20 years and weekly pay at £430 (£430 In Northern Ireland). Years of service or earnings over these amounts are not included in the calculation.
 

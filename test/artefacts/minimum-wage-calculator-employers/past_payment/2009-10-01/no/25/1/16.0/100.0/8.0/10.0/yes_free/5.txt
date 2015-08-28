@@ -3,10 +3,10 @@
 $C
 You were paying the National Minimum Wage.
 
-You don’t owe the worker any past payments.
+You don't owe the worker any past payments.
 $C
 
-The National Minimum Wage per hour at the time | The worker’s actual pay
+The National Minimum Wage per hour at the time | The worker's actual pay
 - | -
 £5.80 | £6.38
 
