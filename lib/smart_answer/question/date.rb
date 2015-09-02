@@ -84,7 +84,7 @@ module SmartAnswer
       end
 
       def range(state)
-        @range ||= @from_func.present? and @to_func.present? ? @from_func.call(state)..@to_func.call(state) : false
+        @range ||= @from_func.present? && @to_func.present? ? @from_func.call(state)..@to_func.call(state) : false
       end
 
       def parse_input(input, state)

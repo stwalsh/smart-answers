@@ -45,12 +45,12 @@ module SmartAnswer
 
       context "with an array" do
         should "return the responses as a sorted comma-separated string" do
-          assert_equal 'green,red', @question.parse_input(['red', 'green'], state = nil)
+          assert_equal 'green,red', @question.parse_input(%w(red green), state = nil)
         end
 
         should "raise an error if given a non-existing response" do
           assert_raise InvalidResponse do
-            @question.parse_input ['blue', 'orange'], state = nil
+            @question.parse_input %w(blue orange), state = nil
           end
         end
       end
