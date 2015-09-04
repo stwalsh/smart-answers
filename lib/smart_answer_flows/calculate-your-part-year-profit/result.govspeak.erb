@@ -20,4 +20,6 @@
   <% end %>
 
   Your estimated taxable profit between <%= format_date(calculator.basis_period.begins_on) %> and <%= format_date(calculator.basis_period.ends_on) %> was: <%= format_money(calculator.taxable_profit) %>
+
+  ADD-TEXT-FOR-KEEPING-RECORDS-FOR-NUMBER-OF-YEARS
 <% end %>
