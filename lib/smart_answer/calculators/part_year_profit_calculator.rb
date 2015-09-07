@@ -4,6 +4,7 @@ module SmartAnswer
       include ActiveModel::Model
 
       attr_accessor :tax_credits_award_ends_on, :accounts_end_month_and_day, :taxable_profit
+      attr_accessor :commenced_trading_on
       attr_accessor :ceased_trading_on
 
       def valid_ceased_trading_date?(date)
@@ -15,10 +16,12 @@ module SmartAnswer
       end
 
       def basis_period
-        if ceased_trading_on
-          DateRange.new(begins_on: accounting_period.begins_on, ends_on: ceased_trading_on)
-        else
+        begins_on = [accounting_period.begins_on, commenced_trading_on].compact.max
+        ends_on   = ceased_trading_on || accounting_period.ends_on
+        if begins_on == accounting_period.begins_on && ends_on == accounting_period.ends_on
           accounting_period
+        else
+          DateRange.new(begins_on: begins_on, ends_on: ends_on)
         end
       end
 

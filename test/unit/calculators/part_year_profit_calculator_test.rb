@@ -79,6 +79,35 @@ module SmartAnswer
           expected_range = DateRange.new(begins_on: Date.parse('2015-01-01'), ends_on: Date.parse('2015-02-01'))
           assert_equal expected_range, @calculator.basis_period
         end
+
+        should 'return the period between the start trading date and the accounting date that falls in the tax year within which the tax credits award ends' do
+          tax_year = TaxYear.new(begins_in: 2015)
+          @calculator.stubs(tax_year: tax_year)
+          accounting_period = YearRange.new(begins_on: Date.parse('2014-08-01'))
+          @calculator.stubs(accounting_period: accounting_period)
+          @calculator.commenced_trading_on = Date.parse('2014-09-01')
+
+          expected_basis_period = DateRange.new(
+            begins_on: Date.parse('2014-09-01'),
+            ends_on:   Date.parse('2015-07-31')
+          )
+          assert_equal expected_basis_period, @calculator.basis_period
+        end
+
+        should 'WIP: Handle Example 8 in Started trading examples document' do
+          tax_year = TaxYear.new(begins_in: 2015)
+          @calculator.stubs(tax_year: tax_year)
+          accounting_period = YearRange.new(begins_on: Date.parse('2014-08-01'))
+          @calculator.stubs(accounting_period: accounting_period)
+          @calculator.commenced_trading_on = Date.parse('2014-09-01')
+          @calculator.ceased_trading_on    = Date.parse('2016-02-20')
+
+          expected_basis_period = DateRange.new(
+            begins_on: Date.parse('2014-09-01'),
+            ends_on:   Date.parse('2016-02-20')
+          )
+          assert_equal expected_basis_period, @calculator.basis_period
+        end
       end
 
       context 'accounting period' do
