@@ -43,8 +43,8 @@ module SmartAnswer::Calculators
       end
     end
 
-    def pro_rata_holiday_entitlement(holiday_entitlement, weeks_at_current_employer)
-      sprintf("%.1f", (holiday_entitlement * (weeks_at_current_employer / 52.0)))
+    def pro_rata_holiday_entitlement(days_worked_per_week, weeks_at_current_employer)
+      sprintf("%.1f", (holiday_days(days_worked_per_week) * (weeks_at_current_employer / 52.0)))
     end
   end
 end
