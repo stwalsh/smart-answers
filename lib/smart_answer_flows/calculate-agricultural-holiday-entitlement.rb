@@ -45,19 +45,7 @@ module SmartAnswer
         option "same-employer" => :done
         option "multiple-employers" => :how_many_weeks_at_current_employer?
 
-        calculate :holiday_entitlement_days do |response|
-          if response == 'same-employer'
-            # This is calculated as a flat number based on the days you work
-            # per week
-            if !days_worked_per_week.nil?
-              calculator.holiday_days(days_worked_per_week)
-            elsif !weeks_from_october_1.nil?
-              calculator.holiday_days (total_days_worked.to_f / weeks_from_october_1.to_f).round(10)
-            end
-          else
-            nil
-          end
-        end
+        save_input_as :worked_for_same_employer_for_a_year
       end
 
       value_question :how_many_total_days?, parse: Integer do
@@ -81,17 +69,26 @@ module SmartAnswer
         #Has to be less than a full year
         validate { |response| response < 52 }
 
-        calculate :holiday_entitlement_days do |response|
-          if !days_worked_per_week.nil?
-            days = calculator.holiday_days(days_worked_per_week)
-          elsif !weeks_from_october_1.nil?
-            days = calculator.holiday_days (total_days_worked.to_f / weeks_from_october_1.to_f).round(10)
-          end
-          sprintf("%.1f", (days * (response / 52.0)).round(10))
-        end
+        save_input_as :weeks_at_current_employer
       end
 
-      outcome :done
+      outcome :done do
+        precalculate :holiday_entitlement_days do
+          # This is calculated as a flat number based on the days you work
+          # per week
+          holiday_entitlement = if !days_worked_per_week.nil?
+            calculator.holiday_days(days_worked_per_week)
+          elsif !weeks_from_october_1.nil?
+            calculator.holiday_days (total_days_worked.to_f / weeks_from_october_1.to_f).round(10)
+          end
+
+          if worked_for_same_employer_for_a_year == 'multiple-employers'
+            sprintf("%.1f", (holiday_entitlement * (weeks_at_current_employer / 52.0)).round(10))
+          else
+            holiday_entitlement
+          end
+        end
+      end
     end
   end
 end
