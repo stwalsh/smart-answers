@@ -79,11 +79,7 @@ module SmartAnswer
         validate { |response| response < 52 }
       end
 
-      outcome :done do
-        precalculate :holiday_entitlement_days do
-          calculator.holiday_entitlement_days
-        end
-      end
+      outcome :done
     end
   end
 end
