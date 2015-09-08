@@ -79,11 +79,11 @@ module SmartAnswer
           holiday_entitlement = if days_worked_per_week
             calculator.holiday_days(days_worked_per_week)
           elsif weeks_from_october_1
-            calculator.holiday_days (total_days_worked.to_f / weeks_from_october_1.to_f).round(10)
+            calculator.holiday_days (total_days_worked.to_f / weeks_from_october_1.to_f)
           end
 
           if worked_for_same_employer_for_a_year == 'multiple-employers'
-            sprintf("%.1f", (holiday_entitlement * (weeks_at_current_employer / 52.0)).round(10))
+            sprintf("%.1f", (holiday_entitlement * (weeks_at_current_employer / 52.0)))
           else
             holiday_entitlement
           end
