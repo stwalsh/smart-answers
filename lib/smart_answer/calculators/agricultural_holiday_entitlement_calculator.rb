@@ -4,6 +4,7 @@ module SmartAnswer::Calculators
   class AgriculturalHolidayEntitlementCalculator
     # created for the agricultural holiday entitlement calculator
 
+    attr_accessor :works_the_same_number_of_days_each_week
     attr_accessor :days_worked_per_week
     attr_accessor :holiday_starts_on
     attr_accessor :worked_for_same_employer_for_a_year
@@ -56,7 +57,7 @@ module SmartAnswer::Calculators
     def holiday_entitlement_days
       # This is calculated as a flat number based on the days you work
       # per week
-      days_worked = if days_worked_per_week
+      days_worked = if works_the_same_number_of_days_each_week
         days_worked_per_week
       else
         average_number_of_days_worked_per_week

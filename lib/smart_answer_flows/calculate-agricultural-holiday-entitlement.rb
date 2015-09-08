@@ -6,11 +6,21 @@ module SmartAnswer
       satisfies_need "100143"
 
       multiple_choice :work_the_same_number_of_days_each_week? do
-        option "same-number-of-days" => :how_many_days_per_week?
-        option "different-number-of-days" => :what_date_does_holiday_start?
+        option "same-number-of-days"
+        option "different-number-of-days"
 
-        calculate :calculator do
+        next_node_calculation :calculator do
           Calculators::AgriculturalHolidayEntitlementCalculator.new
+        end
+
+        next_node do |response|
+          if response == "same-number-of-days"
+            calculator.works_the_same_number_of_days_each_week = true
+            :how_many_days_per_week?
+          else
+            calculator.works_the_same_number_of_days_each_week = false
+            :what_date_does_holiday_start?
+          end
         end
       end
 
