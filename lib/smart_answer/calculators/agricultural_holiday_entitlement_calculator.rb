@@ -24,7 +24,7 @@ module SmartAnswer::Calculators
       (Date.today.to_datetime - calculation_period.to_datetime).to_i
     end
 
-    def holiday_days(days_worked_per_week)
+    def full_holiday_entitlement(days_worked_per_week)
       days_worked_per_week = days_worked_per_week.to_f
       if days_worked_per_week > 6
         38
@@ -44,7 +44,7 @@ module SmartAnswer::Calculators
     end
 
     def pro_rata_holiday_entitlement(days_worked_per_week, weeks_at_current_employer)
-      sprintf("%.1f", (holiday_days(days_worked_per_week) * (weeks_at_current_employer / 52.0)))
+      sprintf("%.1f", (full_holiday_entitlement(days_worked_per_week) * (weeks_at_current_employer / 52.0)))
     end
   end
 end
