@@ -59,7 +59,7 @@ module SmartAnswer::Calculators
       days_worked = if days_worked_per_week
         days_worked_per_week
       else
-        total_days_worked.to_f / weeks_worked(holiday_starts_on).to_f
+        average_number_of_days_worked_per_week
       end
 
       if worked_for_same_employer_for_a_year
@@ -67,6 +67,10 @@ module SmartAnswer::Calculators
       else
         pro_rata_holiday_entitlement(days_worked, weeks_at_current_employer)
       end
+    end
+
+    def average_number_of_days_worked_per_week
+      total_days_worked.to_f / weeks_worked(holiday_starts_on).to_f
     end
   end
 end
