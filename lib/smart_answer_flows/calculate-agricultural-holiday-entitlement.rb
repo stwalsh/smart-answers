@@ -81,19 +81,7 @@ module SmartAnswer
 
       outcome :done do
         precalculate :holiday_entitlement_days do
-          # This is calculated as a flat number based on the days you work
-          # per week
-          days_worked = if calculator.days_worked_per_week
-            calculator.days_worked_per_week
-          else
-            calculator.total_days_worked.to_f / calculator.weeks_worked(calculator.holiday_starts_on).to_f
-          end
-
-          if calculator.worked_for_same_employer_for_a_year
-            calculator.full_holiday_entitlement(days_worked)
-          else
-            calculator.pro_rata_holiday_entitlement(days_worked, calculator.weeks_at_current_employer)
-          end
+          calculator.holiday_entitlement_days
         end
       end
     end

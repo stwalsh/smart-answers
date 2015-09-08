@@ -52,5 +52,21 @@ module SmartAnswer::Calculators
     def pro_rata_holiday_entitlement(days_worked_per_week, weeks_at_current_employer)
       sprintf("%.1f", (full_holiday_entitlement(days_worked_per_week) * (weeks_at_current_employer / 52.0)))
     end
+
+    def holiday_entitlement_days
+      # This is calculated as a flat number based on the days you work
+      # per week
+      days_worked = if days_worked_per_week
+        days_worked_per_week
+      else
+        total_days_worked.to_f / weeks_worked(holiday_starts_on).to_f
+      end
+
+      if worked_for_same_employer_for_a_year
+        full_holiday_entitlement(days_worked)
+      else
+        pro_rata_holiday_entitlement(days_worked, weeks_at_current_employer)
+      end
+    end
   end
 end
