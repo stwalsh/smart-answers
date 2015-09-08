@@ -4,6 +4,12 @@ module SmartAnswer::Calculators
   class AgriculturalHolidayEntitlementCalculator
     # created for the agricultural holiday entitlement calculator
 
+    attr_accessor :days_worked_per_week
+    attr_accessor :holiday_starts_on
+    attr_accessor :worked_for_same_employer_for_a_year
+    attr_accessor :weeks_at_current_employer
+    attr_accessor :total_days_worked
+
     def calculation_period
       # Agricultural holiday calculations run from Oct 1 - Oct 1
       this_year_period = Date.civil(Date.today.year, 10, 1)
