@@ -94,7 +94,7 @@ module SmartAnswer
           month: date.month,
           year: date.year
         }
-      rescue
+      rescue InvalidResponse
         nil
       end
 
