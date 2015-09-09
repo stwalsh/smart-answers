@@ -9,9 +9,6 @@ Send one copy to the British Embassy in Jakarta by email or post. Take the other
 
 ^Allow the embassy at least 2 days to process your paperwork before turning up for your appointment.^
 
-
-
-
 $A
 British Embassy Jakarta
 British Embassy Jakarta
@@ -32,17 +29,13 @@ Email: <Jakarta.mcs@fco.gov.uk>
 
 $C
 
-
-
 If you’ve been divorced or widowed, you’ll need to provide:
 
 - a [decree absolute or final order](/copy-decree-absolute-final-order) or [death certificate](/order-copy-birth-death-marriage-certificate/)
 - evidence of nationality or residence where your divorce took place if it was outside the UK. You’ll need to get it [translated](/government/collections/list-of-lawyers) if it’s not in English
 - evidence if you’ve changed your name by deed poll
 
-
 ^Your partner will need to get an affidavit as well.^
-
 
 ##Fees
 
@@ -51,5 +44,4 @@ Service | Fee
 Issuing any other consular letter or certificate in English | £45
 Issuing any other consular letter or certificate in any other language | £70
 Affidavit for marriage | £55
-
 
