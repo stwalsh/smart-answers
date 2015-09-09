@@ -1,0 +1,13 @@
+<% if !@presenter.started? %>
+<%= @presenter.title %>
+
+<%= @presenter.body(html: false) -%>
+
+<%= @presenter.post_body(html: false) -%>
+<% elsif @presenter.finished? %>
+<%= @presenter.current_node.title %>
+
+<%= @presenter.current_node.body(html: false) -%>
+
+<%= @presenter.current_node.next_steps(html: false) -%>
+<% end %>

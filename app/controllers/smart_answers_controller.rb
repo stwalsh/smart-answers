@@ -25,6 +25,9 @@ class SmartAnswersController < ApplicationController
           render
         }
       end
+      format.govspeak {
+        render
+      }
     end
 
     set_expiry
