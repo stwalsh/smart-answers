@@ -22,6 +22,7 @@ class OutcomePresenter < NodePresenter
       render_erb_template
       govspeak = @view.content_for(:body) || ''
       govspeak = strip_leading_spaces(govspeak.to_str)
+      govspeak = strip_extra_blank_lines(govspeak)
       html ? GovspeakPresenter.new(govspeak).html : govspeak
     end
   end
@@ -31,6 +32,7 @@ class OutcomePresenter < NodePresenter
       render_erb_template
       govspeak = @view.content_for(:next_steps) || ''
       govspeak = strip_leading_spaces(govspeak.to_str)
+      govspeak = strip_extra_blank_lines(govspeak)
       html ? GovspeakPresenter.new(govspeak).html : govspeak
     end
   end
@@ -86,5 +88,9 @@ class OutcomePresenter < NodePresenter
 
   def strip_leading_spaces(string)
     string.gsub(/^ +/, '')
+  end
+
+  def strip_extra_blank_lines(string)
+    string.gsub(/(\n$){2,}/m, "\n")
   end
 end
